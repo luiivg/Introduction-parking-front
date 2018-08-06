@@ -1,25 +1,22 @@
-<div>
-  <label for="tipoVehiculo">Tipo Vehiculo</label>
-  <button class="btn btn-primary dropdown-toggle" type="button" id="tipoVehiculo" 
-    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Tipo Vehiculo
-  </button>
-    <div class="dropdown-menu" aria-labelledby="tipoVehiculo">
-    <a class="dropdown-item" href="#">Carro</a>
-    <a class="dropdown-item" href="#">Moto</a>
-  </div>  
-</div>
-<div>
-  <label for="placa">Placa</label>
-  <input id="placa" type="text" placeholder="Placa" aria-label="Placa">
-</div>
-<div>
-  <label for="cilindraje">Cilindraje</label>
-  <input id="cilindraje" type="text" placeholder="Cilindraje" aria-label="Cilindraje">
-</div>
-<div>
-  <input class="btn btn-primary" type="submit" value="Aceptar">
-  <input class="btn btn-primary" type="reset" value="Cancelar">
-</div>
-  
+<form (ngSubmit) = "registrar()">
+  <div>
+    <label for="tipoVehiculo">Tipo Vehiculo *</label>
+    <select class="custom-select" name="tipoVehiculo" (change)="onChange($event)">
+      <option selected>Seleccione</option>
+      <option *ngFor="let tipo of tiposVehiculo" >{{ tipo.name }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="placa">Placa</label>
+    <input id="placa" type="text" placeholder="Placa" aria-label="Placa">
+  </div>
+  <div>
+    <label for="cilindraje">Cilindraje</label>
+    <input id="cilindraje" type="text" placeholder="Cilindraje" aria-label="Cilindraje">
+  </div>
+  <div>
+    <input id="Guargar" class="btn btn-primary" type="submit" value="Aceptar">
+    <input id="cancelar" class="btn btn-primary" type="reset" value="Cancelar">
+  </div>
+</form>  
 

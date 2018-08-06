@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ConsultaService } from './service/consulta.service';
+import { Vehiculo } from '../registro/vehiculo';
 
 @Component({
   selector: 'app-consulta',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsultaComponent implements OnInit {
 
-  constructor() { }
+  vehiculos:Array<Vehiculo>;
+  constructor(private consulta:ConsultaService) { }
 
   ngOnInit() {
+    this.consulta.consultarVehiculos().subscribe(
+      vehiculos => this.vehiculos = vehiculos
+    );
+     
   }
 
+  
 }

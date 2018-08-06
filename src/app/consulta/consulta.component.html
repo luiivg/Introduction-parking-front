@@ -4,28 +4,16 @@
       <tr>
         <th scope="col">#</th>
         <th scope="col">Placa</th>
-        <th scope="col">Tpo(Carro, Moto)</th>
+        <th scope="col">Tipo(Carro, Moto)</th>
         <th scope="col">Fecha Ingreso</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
+      <tr *ngFor = "let vehiculo of vehiculos">
+        <th scope="row">{{vehiculo.id}}</th>
+        <td>{{vehiculo.placa}}</td>
+        <td>{{vehiculo.tipo}}</td>
+        <td>{{vehiculo.fechaIngreso}}</td>
       </tr>
     </tbody>
   </table>
