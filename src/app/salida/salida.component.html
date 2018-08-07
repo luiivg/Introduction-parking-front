@@ -1,32 +1,43 @@
-<div>
-  <label for="tipoVehiculo">Tipo Vehiculo</label>
-  <input id="tipoVehiculo" type="text" placeholder="tipoVehiculo" disabled>
-</div>
-<div>
-  <label for="placa">Placa</label>
-  <input id="placa" type="text" placeholder="Placa" disabled>
-</div>
-<div>    
-  <label for="cilindraje">Cilindraje</label>
-  <input id="cilindraje" type="text" placeholder="Cilindraje" disabled>
-</div>
-<div>
-  <label for="fechaIngreso">Fecha Ingreso</label>
-  <input id="fechaIngreso" type="text" placeholder="Fecha Ingres" disabled>
-</div>
-<div>
-  <label for="fechaSalida">Fecha Salida</label>
-  <input id="fechaSalida" type="text" placeholder="Fecha Salida" disabled>
-</div>
-<div>
-  <label for="duracion">Total horas en parquedeadero</label>
-  <input id="duracion" type="text" placeholder="Total horas en parquedeadero" disabled>
-</div>
-<div>
-  <label for="totalPagar">Total a pagar</label>
-  <input id="totalPagar" type="text" placeholder="Total a pagar" disabled>
-</div>
-<div>
-    <input class="btn btn-primary" type="submit" value="Aceptar">
-    <input class="btn btn-primary" type="reset" value="Cancelar">
+<div class="container col-8">
+  <div class="form-group">
+    <div class="form-group row">
+        <label class="col-4 col-form-label" for="bucarPlaca">Placa</label>
+        <input class="col-6 form-control" id="bucarPlaca" type="text" placeholder="Placa">
+        <button id="Guargar" class="col-sm-2  btn btn-primary" type="submit">Aceptar</button>
+    </div>
+    <div class="form-group row">
+      <label class="col-4 col-form-label" for="tipoVehiculo">Tipo Vehiculo</label>
+      <input class="col-8 form-control" id="tipoVehiculo" type="text" placeholder="tipoVehiculo" disabled>
+    </div>
+    <div class="form-group row">
+      <label class="col-4 col-form-label" for="placa">Placa</label>
+      <input class="col-8 form-control" id="placa" type="text" placeholder="Placa" disabled>
+    </div>
+    <div class="form-group row">    
+      <label class="col-4 col-form-label" for="cilindraje">Cilindraje</label>
+      <input class="col-8 form-control" id="cilindraje" type="text" placeholder="Cilindraje" disabled>
+    </div>
+    <div class="form-group row">
+      <label class="col-4 col-form-label" for="fechaIngreso">Fecha Ingreso</label>
+      <input class="col-8 form-control" id="fechaIngreso" type="text" placeholder="Fecha Ingres" disabled>
+    </div>
+    <div class="form-group row">
+      <label class="col-4 col-form-label" for="fechaSalida">Fecha Salida</label>
+      <input class="col-8 form-control" id="fechaSalida" type="text" placeholder="Fecha Salida" disabled>
+    </div>
+    <div class="form-group row">
+      <label class="col-4 col-form-label" for="duracion">Total horas en parquedeadero</label>
+      <input class="col-8 form-control" id="duracion" type="text" placeholder="Total horas en parquedeadero" disabled>
+    </div>
+    <div class="form-group row">
+      <label class="col-4 col-form-label" for="totalPagar">Total a pagar</label>
+      <input class="col-8 form-control" id="totalPagar" type="text" placeholder="Total a pagar" disabled>
+    </div>
+    <div class="col-md-10">
+      <div class="row justify-content-between">
+        <button id="GuargarSalida" class="col-sm-5  btn btn-primary" type="submit">Aceptar</button>
+        <button id="cancelarSalida" class="col-sm-5 btn btn-primary" type="reset">Cancelar</button>
+      </div>
+    </div>
+  </div>
 </div>
