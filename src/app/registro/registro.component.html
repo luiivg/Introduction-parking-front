@@ -5,16 +5,16 @@
               <label class="col-4 col-form-label" for="tipoVehiculo">Tipo Vehiculo *</label>
               <select class="col-8 custom-select" name="tipoVehiculo" (change)="onChange($event)">
                 <option selected>Seleccione</option>
-                <option *ngFor="let tipo of tiposVehiculo" >{{ tipo.name }}</option>
+                <option *ngFor="let tipo of tiposVehiculo" [ngValue]="tipo.name">{{ tipo.name }}</option>
               </select>
             </div>
             <div class="form-group row">
               <label class="col-4 col-form-label" for="placa">Placa *</label>
-              <input id="placa" class="col-8 form-control" type="text" placeholder="Placa" aria-label="Placa">
+              <input id="placa"  class="col-8 form-control" [(ngModel)]="vehiculo.placa" name="placa" type="text" placeholder="Placa" aria-label="Placa">
             </div>
             <div class="form-group row">
               <label class="col-4 col-form-label" for="cilindraje">Cilindraje *</label>
-              <input id="cilindraje" class="col-8 form-control" type="text" placeholder="Cilindraje" aria-label="Cilindraje">
+              <input id="cilindraje" class="col-8 form-control" [(ngModel)]="vehiculo.cilindraje" name="cilindraje" type="text" placeholder="Cilindraje" aria-label="Cilindraje">
             </div>
             <div class="col-md-10">
                 <div class="row justify-content-between">

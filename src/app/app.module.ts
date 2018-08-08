@@ -10,6 +10,7 @@ import { ConsultaComponent } from './consulta/consulta.component';
 import { RegistroService} from './registro/registro.service';
 import { ConsultaService } from './consulta/service/consulta.service';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
+import { FormsModule} from '@angular/forms' 
 
 
 @NgModule({
@@ -23,8 +24,10 @@ import { HttpClientModule } from '../../node_modules/@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
+  
   providers: [RegistroService,ConsultaService],
   bootstrap: [AppComponent]
 })
