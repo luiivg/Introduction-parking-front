@@ -6,6 +6,7 @@
         <th scope="col">Placa</th>
         <th scope="col">Tipo(Carro, Moto)</th>
         <th scope="col">Fecha Ingreso</th>
+        <th scope="col">Editar</th>
       </tr>
     </thead>
     <tbody>
@@ -14,6 +15,9 @@
         <td>{{vehiculo.placa}}</td>
         <td>{{vehiculo.tipo}}</td>
         <td>{{vehiculo.fechaIngreso}}</td>
+        <td>
+          <button class="col-sm-5  btn btn-primary" type="button" name="retirar" [routerLink]="['/salida',vehiculo.placa]">Retirar</button>
+        </td>
       </tr>
     </tbody>
   </table>

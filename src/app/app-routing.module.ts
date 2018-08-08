@@ -7,7 +7,8 @@ import { ConsultaComponent } from './consulta/consulta.component';
 const routes: Routes = [
   { path: 'ingreso', component: RegistroComponent },
   { path: 'salida', component: SalidaComponent },
-  { path: 'busqueda', component: ConsultaComponent }  
+  { path: 'busqueda', component: ConsultaComponent },
+  { path: 'salida/:placa', component: SalidaComponent } 
 ];
 
 @NgModule({

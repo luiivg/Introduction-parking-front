@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ConsultaService } from './service/consulta.service';
 import { Vehiculo } from '../registro/vehiculo';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Factura } from '../salida/factura'
 
 @Component({
   selector: 'app-consulta',
@@ -10,7 +12,10 @@ import { Vehiculo } from '../registro/vehiculo';
 export class ConsultaComponent implements OnInit {
 
   vehiculos:Array<Vehiculo>;
-  constructor(private consulta:ConsultaService) { }
+  private factura: Factura = new Factura()
+  constructor(private consulta:ConsultaService,
+    private router: Router,
+    private activatedRouter: ActivatedRoute) { }
 
   ngOnInit() {
     this.consulta.consultarVehiculos().subscribe(
@@ -19,5 +24,5 @@ export class ConsultaComponent implements OnInit {
      
   }
 
-  
+   
 }
