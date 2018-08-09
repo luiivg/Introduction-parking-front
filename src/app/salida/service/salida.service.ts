@@ -11,7 +11,7 @@ export class SalidaService {
   constructor(private http:HttpClient) { }
 
   getFacturaVehiculo(placa): Observable<Factura>{
-    return this.http.get<Factura>('{http://localhost:8090/api/factura/generarFactura/'+ `${placa}`);
+    return this.http.get<Factura>('http://localhost:8090/api/factura/generarFactura/'+ `${placa}`);
   }
 
   registrarFactura(factura: Factura):Observable<Factura>{
